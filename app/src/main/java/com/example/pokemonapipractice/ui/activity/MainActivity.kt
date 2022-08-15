@@ -1,7 +1,8 @@
-package com.example.pokemonapipractice
+package com.example.pokemonapipractice.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pokemonapipractice.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
