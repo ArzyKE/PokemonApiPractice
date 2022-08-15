@@ -3,7 +3,6 @@ package com.example.pokemonapipractice.data.remote.retrofit
 import com.example.pokemonapipractice.data.remote.apiservices.PokemonApiService
 import javax.inject.Inject
 
-
 class NetworkClient @Inject constructor(
     retrofitClient: RetrofitClient,
     okHttp: OkHttp
