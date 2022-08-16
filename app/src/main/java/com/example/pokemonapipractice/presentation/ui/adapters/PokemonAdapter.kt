@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.pokemonapipractice.databinding.ItemPokemonBinding
-import com.example.pokemonapipractice.presentation.ui.models.PokemonModelUI
+import com.example.pokemonapipractice.presentation.models.PokemonModelUI
 
 class PokemonAdapter : ListAdapter<PokemonModelUI, PokemonAdapter.PokemonViewHolder>(PokemonDiffCallBack) {
 
@@ -29,7 +30,10 @@ class PokemonAdapter : ListAdapter<PokemonModelUI, PokemonAdapter.PokemonViewHol
         private val binding: ItemPokemonBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(item: PokemonModelUI) {
-            binding.pokemonNameItem.text = item?.name
+            binding.pokemonNameItem.text = item.name
+            Glide.with(binding.imPokemon.context)
+                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.pokemonId}.png")
+                .into(binding.imPokemon)
         }
     }
 }

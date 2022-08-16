@@ -1,4 +1,4 @@
-package com.example.pokemonapipractice.presentation.ui.models
+package com.example.pokemonapipractice.presentation.models
 
 data class PokemonResponseUI<T>(
     val results: ArrayList<T>

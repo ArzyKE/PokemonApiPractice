@@ -1,4 +1,4 @@
-package com.example.pokemonapipractice.data.remote.retrofit
+package com.example.pokemonapipractice.data.remote.network.retrofit
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

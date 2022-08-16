@@ -9,7 +9,7 @@ import com.example.pokemonapipractice.R
 import com.example.pokemonapipractice.databinding.FragmentPokemonBinding
 import com.example.pokemonapipractice.presentation.ui.adapters.PokemonAdapter
 import com.example.pokemonapipractice.presentation.ui.base.BaseFragment
-import com.example.pokemonapipractice.presentation.ui.state.UIState
+import com.example.pokemonapipractice.presentation.state.UIState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

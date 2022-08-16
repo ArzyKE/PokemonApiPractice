@@ -1,10 +1,9 @@
 package com.example.pokemonapipractice.presentation.ui.base
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pokemonapipractice.domain.either.Either
-import com.example.pokemonapipractice.presentation.ui.state.UIState
+import com.example.pokemonapipractice.presentation.state.UIState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
