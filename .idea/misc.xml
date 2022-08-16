@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PokemonApiPractice/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PokemonApiPractice/app/src/main/res/layout/fragment_pokemon.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/user/AndroidStudioProjects/PokemonApiPractice/app/src/main/res/layout/activity_main.xml" value="0.11944444444444445" />
         <entry key="..\:/Users/user/AndroidStudioProjects/PokemonApiPractice/app/src/main/res/layout/fragment_pokemon.xml" value="0.11944444444444445" />
         <entry key="..\:/Users/user/AndroidStudioProjects/PokemonApiPractice/app/src/main/res/layout/item_pokemon.xml" value="0.1796875" />
