@@ -1,6 +1,6 @@
-package com.example.pokemonapipractice.data.remote.retrofit
+package com.example.pokemonapipractice.data.remote.network.retrofit
 
-import com.example.pokemonapipractice.data.remote.apiservices.PokemonApiService
+import com.example.pokemonapipractice.data.remote.network.apiservices.PokemonApiService
 import javax.inject.Inject
 
 class NetworkClient @Inject constructor(

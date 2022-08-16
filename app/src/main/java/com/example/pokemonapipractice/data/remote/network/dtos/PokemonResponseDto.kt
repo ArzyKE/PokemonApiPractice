@@ -1,4 +1,4 @@
-package com.example.pokemonapipractice.data.dtos
+package com.example.pokemonapipractice.data.remote.network.dtos
 
 import com.example.pokemonapipractice.domain.models.PokemonResponse
 import com.google.gson.annotations.SerializedName
