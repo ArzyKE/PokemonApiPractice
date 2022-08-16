@@ -1,17 +1,16 @@
-package com.example.pokemonapipractice.ui.adapters
+package com.example.pokemonapipractice.presentation.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pokemonapipractice.data.models.PokemonModel
 import com.example.pokemonapipractice.databinding.ItemPokemonBinding
+import com.example.pokemonapipractice.presentation.ui.models.PokemonModelUI
 
-class PokemonAdapter : ListAdapter<PokemonModel, PokemonAdapter.PokemonViewHolder>(PokemonDiffCallBack) {
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
+class PokemonAdapter : ListAdapter<PokemonModelUI, PokemonAdapter.PokemonViewHolder>(PokemonDiffCallBack) {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int
     ): PokemonAdapter.PokemonViewHolder {
         return PokemonViewHolder(
             ItemPokemonBinding.inflate(
@@ -29,23 +28,23 @@ class PokemonAdapter : ListAdapter<PokemonModel, PokemonAdapter.PokemonViewHolde
     inner class PokemonViewHolder(
         private val binding: ItemPokemonBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: PokemonModel?) {
+        fun onBind(item: PokemonModelUI) {
             binding.pokemonNameItem.text = item?.name
         }
     }
 }
 
-object PokemonDiffCallBack : DiffUtil.ItemCallback<PokemonModel>() {
+object PokemonDiffCallBack : DiffUtil.ItemCallback<PokemonModelUI>() {
     override fun areItemsTheSame(
-        oldItem: PokemonModel,
-        newItem: PokemonModel
+        oldItem: PokemonModelUI,
+        newItem: PokemonModelUI
     ): Boolean {
         return oldItem.name == newItem.name
     }
 
     override fun areContentsTheSame(
-        oldItem: PokemonModel,
-        newItem: PokemonModel
+        oldItem: PokemonModelUI,
+        newItem: PokemonModelUI
     ): Boolean {
         return oldItem == newItem
     }

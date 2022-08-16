@@ -1,4 +1,4 @@
-package com.example.pokemonapipractice.ui.state
+package com.example.pokemonapipractice.presentation.ui.state
 
 sealed class UIState<T> {
     class Idle<T> : UIState<T>()
