@@ -1,4 +1,4 @@
-package com.example.pokemonapipractice.ui.activity
+package com.example.pokemonapipractice.presentation.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
