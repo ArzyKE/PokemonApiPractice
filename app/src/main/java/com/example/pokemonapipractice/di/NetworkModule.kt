@@ -15,5 +15,4 @@ object NetworkModule {
     @Provides
     fun providePokemonApiServices(networkClient: NetworkClient) =
         networkClient.providePokemonApiService()
-
 }

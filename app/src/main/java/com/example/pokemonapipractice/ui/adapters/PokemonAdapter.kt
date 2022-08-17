@@ -5,10 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.pokemonapipractice.data.models.PokemonModel
 import com.example.pokemonapipractice.databinding.ItemPokemonBinding
 
-class PokemonAdapter : ListAdapter<PokemonModel, PokemonAdapter.PokemonViewHolder>(PokemonDiffCallBack) {
+class PokemonAdapter :
+    ListAdapter<PokemonModel, PokemonAdapter.PokemonViewHolder>(PokemonDiffCallBack) {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -31,6 +33,9 @@ class PokemonAdapter : ListAdapter<PokemonModel, PokemonAdapter.PokemonViewHolde
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(item: PokemonModel?) {
             binding.pokemonNameItem.text = item?.name
+            Glide.with(binding.itemImagePokemon).load(item?.url)
+                .into(binding.itemImagePokemon)
+
         }
     }
 }
