@@ -1,7 +1,7 @@
 package com.example.pokemonapipractice.data.repositories.base
 
 import android.util.Log
-import com.example.pokemonapipractice.utils.Either
+import com.example.pokemonapipractice.domain.either.Either
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow

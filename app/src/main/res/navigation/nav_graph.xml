@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/pokemonFragment"
-        android:name="com.example.pokemonapipractice.ui.fragments.PokemonFragment"
+        android:name="com.example.pokemonapipractice.presentation.ui.fragments.PokemonFragment"
         android:label="fragment_pokemon"
         tools:layout="@layout/fragment_pokemon" />
 </navigation>

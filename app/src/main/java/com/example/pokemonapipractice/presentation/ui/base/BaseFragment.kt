@@ -1,4 +1,4 @@
-package com.example.pokemonapipractice.ui.base
+package com.example.pokemonapipractice.presentation.ui.base
 
 import android.os.Bundle
 import android.view.View
