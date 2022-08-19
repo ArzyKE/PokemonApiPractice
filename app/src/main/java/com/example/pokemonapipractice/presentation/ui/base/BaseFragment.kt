@@ -36,5 +36,4 @@ abstract class BaseFragment<ViewModel : BaseViewModel, Binding : ViewBinding>(
 
     protected open fun setupSubscribe() {
     }
-
 }

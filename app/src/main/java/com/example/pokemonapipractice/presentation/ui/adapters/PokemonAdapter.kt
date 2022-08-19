@@ -8,10 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pokemonapipractice.databinding.ItemPokemonBinding
 import com.example.pokemonapipractice.presentation.models.PokemonModelUI
+import kotlin.reflect.KFunction1
 
-class PokemonAdapter : ListAdapter<PokemonModelUI, PokemonAdapter.PokemonViewHolder>(PokemonDiffCallBack) {
+class PokemonAdapter(private val itemClick: KFunction1<String, Unit>) :
+    ListAdapter<PokemonModelUI, PokemonAdapter.PokemonViewHolder>(PokemonDiffCallBack) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int
+    override fun onCreateViewHolder(
+        parent: ViewGroup, viewType: Int
     ): PokemonAdapter.PokemonViewHolder {
         return PokemonViewHolder(
             ItemPokemonBinding.inflate(
@@ -34,6 +37,10 @@ class PokemonAdapter : ListAdapter<PokemonModelUI, PokemonAdapter.PokemonViewHol
             Glide.with(binding.imPokemon.context)
                 .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.pokemonId}.png")
                 .into(binding.imPokemon)
+
+            binding.root.setOnClickListener {
+                itemClick(item.name)
+            }
         }
     }
 }

@@ -7,5 +7,6 @@ data class PokemonResponseDto<T>(
     @SerializedName("results")
     val results: ArrayList<T>
 )
+
 fun <T> PokemonResponseDto<T>.toDomain() = PokemonResponse<T>(results)
 

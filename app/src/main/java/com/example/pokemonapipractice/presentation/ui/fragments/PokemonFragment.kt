@@ -3,13 +3,14 @@ package com.example.pokemonapipractice.presentation.ui.fragments
 import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.pokemonapipractice.R
 import com.example.pokemonapipractice.databinding.FragmentPokemonBinding
+import com.example.pokemonapipractice.presentation.state.UIState
 import com.example.pokemonapipractice.presentation.ui.adapters.PokemonAdapter
 import com.example.pokemonapipractice.presentation.ui.base.BaseFragment
-import com.example.pokemonapipractice.presentation.state.UIState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -19,7 +20,9 @@ class PokemonFragment :
 
     override val binding by viewBinding(FragmentPokemonBinding::bind)
     override val viewModel: PokemonViewModel by viewModels()
-    private val pokemonAdapter = PokemonAdapter()
+    private val pokemonAdapter = PokemonAdapter(
+        this::onItemClick
+    )
 
     override fun initialize() {
         setupRecyclerview()
@@ -45,5 +48,13 @@ class PokemonFragment :
                 }
             }
         }
+    }
+
+    private fun onItemClick(id: String) {
+        findNavController().navigate(
+            PokemonFragmentDirections.actionPokemonFragmentToPokemonDetailFragment(
+                id
+            )
+        )
     }
 }
