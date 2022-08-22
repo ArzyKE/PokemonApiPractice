@@ -45,6 +45,7 @@ class PokemonFragment :
                         Log.e("anime", it.data.toString())
                         pokemonAdapter.submitList(it.data)
                     }
+                    else -> {}
                 }
             }
         }
