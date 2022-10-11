@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "PokemonApiPractice"
-include ':app'
+include(":app")
