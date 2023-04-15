@@ -82,7 +82,6 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.43.2")
     kapt("com.google.dagger:hilt-compiler:2.43.2")
 
-
     // Lifecycle
     val lifecycle_version = "2.4.0"
 
