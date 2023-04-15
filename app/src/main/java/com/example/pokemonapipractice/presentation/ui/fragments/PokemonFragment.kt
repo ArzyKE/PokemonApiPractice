@@ -14,8 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class PokemonFragment :
-    BaseFragment<PokemonViewModel, FragmentPokemonBinding>(R.layout.fragment_pokemon) {
+class PokemonFragment : BaseFragment<PokemonViewModel, FragmentPokemonBinding>(R.layout.fragment_pokemon) {
 
     override val binding by viewBinding(FragmentPokemonBinding::bind)
     override val viewModel: PokemonViewModel by viewModels()
