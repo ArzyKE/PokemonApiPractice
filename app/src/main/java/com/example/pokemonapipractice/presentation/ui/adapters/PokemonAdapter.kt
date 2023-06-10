@@ -36,7 +36,7 @@ class PokemonAdapter : ListAdapter<PokemonModelUI, PokemonAdapter.PokemonViewHol
                 .into(binding.imPokemon)
         }
     }
-}
+}//
 
 object PokemonDiffCallBack : DiffUtil.ItemCallback<PokemonModelUI>() {
     override fun areItemsTheSame(
